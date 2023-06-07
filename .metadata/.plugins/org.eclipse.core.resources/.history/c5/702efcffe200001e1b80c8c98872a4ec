@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+    <!-- 전역변수 쓰기 -->
+    <%
+    String name="장성호";
+    String msg="hello";
+    %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- // html 파일 안에 java code 쓰기 = jsp...!  ctrl+shift+/ -->
+	<h1>hello jsp</h1>
+	<% 
+	out.println("hello jsp");
+	for(int i=0; i<100; i++){
+		out.println("hello jsp <br>");
+	}
+	
+	%>
+</body>
+</html>

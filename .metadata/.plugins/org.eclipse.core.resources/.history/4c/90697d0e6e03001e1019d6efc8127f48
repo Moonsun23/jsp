@@ -1,0 +1,22 @@
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	String pUserId=request.getParameter("userId");
+	String pUserPw=request.getParameter("userPw");
+	String pUserName=request.getParameter("userName");
+	
+	String driver="oracle.jdbc.OracleDriver";
+	String url="jdbc:oracle:thin:@localhost:1521:xe";
+	String id="hi1237";
+	String pw="1234";
+	// string id, pw는 db의 사용자 이름을쓰는 것! 닫른것과 오해 XX
+	
+	Connection conn=null;
+	PreparedStatement pstmt=null;
+	ResultSet rs=null;
+
+	String sql="insert into member values (?,?,?)";
+%>

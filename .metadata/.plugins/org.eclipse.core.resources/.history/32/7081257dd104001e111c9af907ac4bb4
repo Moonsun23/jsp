@@ -1,0 +1,30 @@
+<%@include file = "include/header.jsp" %>
+<body>
+  <form action="join-process.jsp" method="post" class="join">
+    <!--  // method는 get과 post가 s있는데 비번이 있을땐 포스트!!!! get으로 하면 정보가 다 주소창에 뜸 -->
+    <div>
+      <label><span>ID</span><input type="text" name="userId" /></label>
+    </div>
+    <div>
+      <label><span>PW</span><input type="password" name="userPw" /></label>
+    </div>
+    <div>
+      <label><span>NAME</span><input type="text" name="userName" /></label>
+    </div>
+    <div>
+      <label><span>Address</span><input type="text" name="address" /></label>
+    </div>
+    <div>
+      <label><span>Zipcode</span><input type="text" name="zipcode" /></label>
+    </div>
+    <div>
+      <span>성별</span>
+      <label><span>여자</span><input type="radio" value="female" name="gender" /></label>
+      <label><span>남자</span><input type="radio" value="male" name="gender" /></label>
+    </div>
+    <div>
+      <button>JOIN</button>
+    </div>
+  </form>
+</body>
+<%@include file = "include/footer.jsp" %>

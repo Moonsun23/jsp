@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> <%@include file = "include/header.jsp" %>
+<body>
+  <form action="join-process.jsp" method="post" class="join">
+    <!--  // methodë getê³¼ postê° sìëë° ë¹ë²ì´ ììë í¬ì¤í¸!!!! getì¼ë¡ íë©´ ì ë³´ê° ë¤ ì£¼ìì°½ì ë¸ -->
+    <div class="container-sm mt-5">
+      <div class="row justify-content-center">
+      <!--  row를 쓰는순간 flex 처리가 된다 -->
+        <div class="col-6">
+          <div class="form-floating mb-3">
+            <!-- mb -> margin bottom 3 -->
+            <input type="text" name="userId" class="form-control" id="floatingInput" placeholder="아이디를 입력해주세요." />
+            <label for="floatingInput">ID</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="password" name="userPw" class="form-control" id="floatingPassword" placeholder="Password" />
+            <label for="floatingPassword">Password</label>
+          </div>
+          <div class="form-floating mb-5">
+            <input type="text" name="userName" class="form-control" id="floatingName" placeholder="Password" />
+            <label for="floatingName">Name</label>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-lg">JOIN</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</body>
+<%@include file = "include/footer.jsp" %>

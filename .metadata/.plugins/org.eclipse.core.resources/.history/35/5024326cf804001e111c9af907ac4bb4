@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> <%@include file="include/header.jsp"%>
+
+<!-- <p><%= session.getAttribute("loggedUserName") %></p> -->
+
+<%
+<!-- //db 접속코드.. -->
+%>
+<div class="container-sm mt-5">
+  <table class="table">
+    <tbody>
+      <tr>
+        <th scope="row">ID</th>
+        <td>hi1237</td>
+      </tr>
+      <tr>
+        <th scope="row">Name</th>
+        <td>장문선</td>
+      </tr>
+      <tr>
+        <th scope="row">주소</th>
+        <td>서울시 마포구 망원1동/ 12314</td>
+      </tr>
+      <tr>
+        <th scope="row">우편번호</th>
+        <td>04011</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<%@include file="include/footer.jsp"%>

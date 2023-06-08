@@ -9,6 +9,7 @@
 	String pUserId=request.getParameter("userId");
 	String pUserPw=request.getParameter("userPw");
 	String pUserName=request.getParameter("userName");
+	String pUserEmail=request.getParameter("userEmail");
 	int pZonecode=Integer.parseInt(request.getParameter("zonecode"));
 	String pUserAddress=request.getParameter("userAddress");
 	String pDetailAddress=request.getParameter("detailAddress");
@@ -19,14 +20,15 @@
 	String url="jdbc:oracle:thin:@localhost:1521:xe";
 	String id="hi1237";
 	String pw="1234";
-	// string id, pw는 db의 사용자 이름을쓰는 것! 닫른것과 오해 XX
+	// string id, pw는 db의 사용자 이름을쓰는 것! 다른것과 오해 XX
 	
 	Connection conn=null;
 	PreparedStatement pstmt=null;
 	ResultSet rs=null;
 
-	String sql="insert into member values (?,?,?,?,?,?,?)";
+	String sql="insert into register values (?,?,?,?,?,?,?,?)";
 	// jsp에 가져오는건 자동으로 커밋되는 것으로 디폴트 되어있음.
+	// 위 물음표는 아래 pstmt.setString~ 개수와 연관있음
 	
 	Class.forName(driver);
 	// 아래.. driver connection을 통해 jsp와 db를 연결시켜 줘야 한다!!! jsp와 db는 직접 연결이 안된다.
@@ -35,10 +37,11 @@
 	pstmt.setString(1, pUserId);
 	pstmt.setString(2, pUserName);
 	pstmt.setString(3, pUserPw); // db의 member 테이블의 열 순서대로 써줘야 한다..
-	pstmt.setInt(4, pZonecode);
-	pstmt.setString(5, pUserAddress);
-	pstmt.setString(6, pDetailAddress);
-	pstmt.setString(7, pExtraAddress);
+	pstmt.setString(4, pUserEmail);
+	pstmt.setInt(5, pZonecode);
+	pstmt.setString(6, pUserAddress);
+	pstmt.setString(7, pDetailAddress);
+	pstmt.setString(8, pExtraAddress);
 	
 	int result=pstmt.executeUpdate();
 	//위 괄호에는 table 의 row에 영향을 끼치는 숫자를 써준다

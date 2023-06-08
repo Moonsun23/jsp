@@ -7,7 +7,7 @@
         <div class="col-6">
           <div class="form-floating mb-3">
             <!-- mb -> margin bottom 3 -->
-            <input type="text" name="userId" class="form-control" id="floatingInput" placeholder="아이디를 입력해주세요." readonly/>
+            <input type="text" name="userId" class="form-control" id="floatingInput" placeholder="아이디를 입력해주세요."/>
             <label for="floatingInput">ID</label>
           </div>
           <div class="form-floating mb-3">

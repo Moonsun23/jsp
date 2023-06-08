@@ -21,7 +21,7 @@
     // 위가 query(결과값)를 날려주는것..?
     		
     ResultSet rs=null;
-    String sql= "select * from member where id= ? and password= ?"; // sql이 바뀌는 것..
+    String sql= "select * from register where id= ? and password= ?"; // sql이 바뀌는 것..
     // 띄어쓰기 잘해줘야 함..!!!!!!!!!!!!!!!!!!!!!!!!
     // 여기까지가 기본으로 다 써줘야 하는것...?
     

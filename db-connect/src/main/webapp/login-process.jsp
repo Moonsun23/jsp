@@ -20,7 +20,7 @@
 	PreparedStatement pstmt=null;
 	ResultSet rs=null;
 	
-	String sql="select * from member where id = ? and password= ?";
+	String sql="select * from register where id = ? and password= ?";
 	
 	Class.forName(driver);
 	conn=DriverManager.getConnection(url, id, pw);

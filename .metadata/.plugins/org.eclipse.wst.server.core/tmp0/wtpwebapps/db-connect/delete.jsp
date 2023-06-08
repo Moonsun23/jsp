@@ -9,7 +9,7 @@
 	          <div class="form-floating mb-3">
 	            <!-- mb -> margin bottom 3 -->
 	            <input type="text" name="userId" class="form-control" id="floatingInput" placeholder="아이디를 입력해주세요."
-	            value="hi1237" readonly/>
+	            value="<%=session.getAttribute("loggedUserId") %>"/>
 	            <label for="floatingInput">ID</label>
 	          </div>
 	          <div class="form-floating mb-3">

@@ -1,0 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	Cookie cookie01 =new Cookie("myCookie01", "짱구");
+	cookie01.setPath(request.getContextPath());  // 맥락을 파악하라... dynamic web project 에서 이름 지을때..이름이 contextpath..
+%>

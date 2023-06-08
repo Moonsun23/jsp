@@ -118,3 +118,17 @@
 0:0:0:0:0:0:0:1 - - [07/Jun/2023:16:40:18 +0900] "POST /db-connect/delete-process.jsp HTTP/1.1" 200 12
 0:0:0:0:0:0:0:1 - - [07/Jun/2023:16:41:05 +0900] "GET /db-connect/delete.jsp HTTP/1.1" 200 2030
 0:0:0:0:0:0:0:1 - - [07/Jun/2023:16:41:07 +0900] "POST /db-connect/delete-process.jsp HTTP/1.1" 200 164
+127.0.0.1 - - [07/Jun/2023:17:11:00 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [07/Jun/2023:17:11:00 +0900] "GET /db-connect/delete.jsp HTTP/1.1" 200 2030
+0:0:0:0:0:0:0:1 - - [07/Jun/2023:17:11:00 +0900] "GET /db-connect/css/bootstrap.min.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [07/Jun/2023:17:11:00 +0900] "GET /db-connect/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [07/Jun/2023:17:11:05 +0900] "POST /db-connect/delete-process.jsp HTTP/1.1" 200 164
+0:0:0:0:0:0:0:1 - - [07/Jun/2023:17:11:20 +0900] "GET /db-connect/delete.jsp HTTP/1.1" 200 2030
+0:0:0:0:0:0:0:1 - - [07/Jun/2023:17:11:40 +0900] "GET /db-connect/delete.jsp HTTP/1.1" 200 2030
+0:0:0:0:0:0:0:1 - - [07/Jun/2023:17:12:03 +0900] "GET /db-connect/delete.jsp HTTP/1.1" 200 2022
+0:0:0:0:0:0:0:1 - - [07/Jun/2023:17:12:09 +0900] "POST /db-connect/delete-process.jsp HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [07/Jun/2023:17:12:09 +0900] "GET /db-connect/login-form.jsp HTTP/1.1" 200 1989
+0:0:0:0:0:0:0:1 - - [07/Jun/2023:18:00:13 +0900] "GET /db-connect/join-form.jsp HTTP/1.1" 200 6094
+0:0:0:0:0:0:0:1 - - [07/Jun/2023:18:00:20 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [07/Jun/2023:18:01:00 +0900] "GET /db-connect/js/bootstrap.bundle.min.js.map HTTP/1.1" 404 856
+0:0:0:0:0:0:0:1 - - [07/Jun/2023:18:01:00 +0900] "GET /db-connect/css/bootstrap.min.css.map HTTP/1.1" 404 851

@@ -6,7 +6,7 @@
     pageEncoding="UTF-8"%>
 
 <%
-
+	request.setCharacterEncoding("utf-8");
 	String pUserId=request.getParameter("userId");
 	String pUserPw=request.getParameter("userPw");
 	
@@ -17,9 +17,9 @@
 			
 	Connection conn=null;
 	PreparedStatement pstmt=null;
-	ResultSet rs=null;
 	
-	String sql="delete from member where id = ? and password = ?";
+	
+	String sql="delete from register where id = ? and password = ?";
 	
 	Class.forName(driver);
 	conn=DriverManager.getConnection(url, id, pw);

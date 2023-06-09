@@ -26,28 +26,53 @@
   </div>
 </form>
 <script>
-
-
-   const pwForm = document.forms.pwForm;
-   // body 밑의 form을 모두 찾아라!
-  console.log(joinForm);
-
-   btnSubmit.addEventListener("click", (e) => {
-     	//console.log(joinForm.elements.newUserPw.value);
-    if(joinForm.elements.userPw.value.trim() === ""){
-    		if (joinForm.elements.newUserPw.value.trim() === "") {
-  	      e.preventDefault();
-  	      alert("비번을 입력하세요.");
-  	      joinForm.elements.newUserPw.value="";
-  	      joinForm.elements.newUserPw.focus();
-  	    } else if (joinForm.elements.newUserPw.value !== joinForm.elements.newUserPw02.value){
-  	        e.preventDefault();
-  	        alert("비밀번호를 재확인하세요.");
-  	        joinForm.elements.newUserPw02.value="";
-  	        joinForm.elements.newUserPw02.focus();
-  	    }
+  const pwForm = document.forms.pwForm;
+  // body 밑의 form을 모두 찾아라!
+  //   const pwForm=document.forms[0]; 으로 써도 된다.
+  const btnSubmit = document.querySelector("#btnSubmit");
+  btnSubmit.addEventListener("click", (e) => {
+    if (pwForm.elements.userPw.value.trim() === "") {
+      // userPw.value에 공백이 없다면..
+      e.preventDefault(); // 기본기능을 없애주는 코드
+      alert("비밀번호를 입력해주세요");
+      pwForm.elements.userPw.focus();
+    } else if (pwForm.elements.newUserPw.value.trim() === "") {
+      // userPw.value에 공백이 없다면..
+      e.preventDefault(); // 기본기능을 없애주는 코드
+      alert("새 비밀번호를 입력해주세용");
+      pwForm.elements.userPw.focus();
+    } else if (pwForm.elements.userPw.value === pwForm.elements.newUserPw.value) {
+      e.preventDefault();
+      alert("기본 비밀번호는 사용 할 수 없습니다.");
+      pwForm.elements.userPw.focus();
+    } else if (pwForm.elements.newUserPw.value !== pwForm.elements.newUser02.value) {
+      e.preventDefault(); // 기본기능을 없애주는 코드
+      alert("비밀번호가 같지 않습니다.");
+      pwForm.elements.userPw.focus();
     }
-     	  });
+  });
+
+  //  btnSubmit.addEventListener("click", (e) => {
+  //    	//console.log(pwForm.elements.newUserPw.value);
+  //   if(pwForm.elements.userPw.value.trim() === ""){
+  //   		if (pwForm.elements.newUserPw.value.trim() === "") {
+  // 	      e.preventDefault();
+  // 	      alert("비번을 입력하세요.");
+  // 	      pwForm.elements.newUserPw.focus();
+  //   		}else if(pwForm.elements.newUserPw.value.trim() === ""){
+  //   			e.preventDefault();
+  //   			alert("새 비밀번호를 입력하세요.");
+  //   			pwForm.elements.newUserPw.focus();
+  //   		} else if (pwForm.elements.userPw.value !== pwForm.elements.newUserPw.value){
+  //     	        e.preventDefault();
+  //     	        alert("기존 비밀번호와 같습니다.");
+  //     	        pwForm.elements.newUserPw02.focus();
+  // 	    } else if (pwForm.elements.newUserPw.value !== pwForm.elements.newUserPw02.value){
+  // 	        e.preventDefault();
+  // 	        alert("비밀번호를 재확인하세요.");
+  // 	        pwForm.elements.newUserPw02.focus();
+  // 	    }
+  //    	  });
 </script>
 
 <%@include file = "include/footer.jsp" %>

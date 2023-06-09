@@ -1,0 +1,38 @@
+ <!-- db조회해서 ID가 중복인지 아닌지 판단 -->
+--> idCheck.jsp
+
+쿠키랑 세션
+
+MemberDto에 전부 묶어서 보낸다.
+dto(data transfer object) 
+/dao(data access object)
+method가 많다..?
+-->>>> 아래 메서드
+insertMember(); => db가 입력되게 함
+modifyMember(); => db가 수정되게 함
+deleteMember();
+getOneMember();
+getAllMember();
+
+MVC -> design pattern...중 하나
+
+model view controller
+
+MVC 패턴의 확장판이 Spring
+
+WEB-INF -> 외부(브라우저)에서 접근이안된다(불가능)
+Controller만 접근 할 수 있어야 한다.
+
+
+HttpServletRequest 에는 사용자의 요청에 대한 모든 정보가
+담겨 있다.
+그 중에서 form을 통해 실려온 데이터는 요청객체의 parameter에
+담겨있다..
+
+parameter를 쓸 때는 name 속성에 담긴 value를 받아온다
+
+
+
+
+
+

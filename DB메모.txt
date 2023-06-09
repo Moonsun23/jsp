@@ -1,0 +1,61 @@
+db(rdbms)
+> 관계형(relative??) db management system
+
+oracle (sql - structured query language)
+mySql
+mariadb
+
+
+자바 - JPA라는 것을 따로 쓴다...
+
+오라클 11g 설치..
+
+비번 까먹지말자 1234
+
+DBeaver..오라클같은 DB 시스템에..쓸수있는
+
+롤 - sysdba 
+
+cmd에서
+lsnrctl service 하면 현재 듣고 있는 프로그램이 나옴
+
+
+***항상 ctrl + enter를 쳐야 함..***
+create user hi1237 identified by 1234;
+
+권한을 준다  -> grant(DB에서 왕임! 권한을 주는거라서!)
+resource -> 
+
+tomcat -> 고정IP가 있어야 함
+서버 = 컴퓨터!(온라인)
+
+1. db연결 db회사에서 driver 제공...
+
+
+C:\oraclexe\app\oracle\product\11.2.0\server
+> jdbs
+> lib
+> jar file... 이것들이 드ㄴ라이버.
+웹에서 사용할 것임.
+
+
+만약 8080 서버를 사용하고 있다고 뜨면
+이클립스의 server 폴더에서 server.xml
+Source 탭으로 들어가서 ctrl+F 눌러서 8080 을 8081, 8082로 바꾸던가 해야함
+
+
+create table member(
+  id varchar2(100),
+    name varchar2(100),
+    password varchar2(100)
+    );
+    -- create Read Update Delete
+ insert into member(id, name, password) values('hi1237','장문선', '1234');
+
+
+서버는 상태를 유지하지 않는다.
+--> stateless.
+ex)로그인 성공했다고 알려주고 끝.
+
+
+WEB-INF 폴더는 보안용폴더라서 web에서 접근이 어려움.. 

@@ -1,0 +1,49 @@
+jsp
+server(java를 갖고 서버를 구성할수있는..)
+
+***********jsp 설정******************
+tomcat..설치 ver.9
+
+환경변수 편집 - 환경변수 - 자바홈 - jdk-11 로 되어있어ㅑㅇ 함
+
+open perspective - Java EE(default)로 커피콩이 떠야함
+
+File- new - Dynamic web project
+
+
+누가 해석을 해줄 것이냐? 
+target runtime ->> Apache Tomcat에서 bin이 보이면 폴더선택 해줌
+
+
+window - preference - enc 검색해서 
+
+workspace 등 전부 UTF-8로 바꿔줌
+
+model 1
+model 2
+
+<% %> -이 안에 자바 코드를 쓰면
+jsp에서는 해석을 해준다.
+
+
+servlet(java 만 쓸 수있음)
+jsp(model1 ==> model2 ==> 
+spring ==> spring boot)
+
+yml(야믈??)
+express, nest.js
+
+servlet ==> 보여준 부분...
+Java Resource - servlet - class: Hello
+doGet만 뜨게 해서...
+
+
+http://localhost:8080/jsp01/Hello?name=moosun
+
+request.setCharacterEncoding("utf-8");
+라고 적으면 주소창에 한글을 적어도 인식 가능
+
+주소를 써서 요청하는건 무조건 get 방식...
+
+
+

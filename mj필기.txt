@@ -1,0 +1,263 @@
+장성호
+jjang051@hanmail.net
+010-2582-2242
+githhub.com/jjang051globalit/java
+=====================
+
+0419 필기
+
+이클립스 - 오른쪽 상단 시간표아이콘 - 자바
+이클립스 IDE for java developers 버전 -> 순수 자바 학습용
+
+c+s+(+/-)
+
+src = source
+package 생성(소문자로/ 숫자가 앞에 올 수 없음/ 특수문자 _, $ 만 가능)
+
+class 생성(class 이름 첫글자는 대문자, 이름중복X, 이름구별짓기(_ 혹은 숫자붙이기), 
+특수문자는 _, $ 만 가능)
+
+ex) CarTire: 단어의 조합 - 첫글자 대문자 사용
+첫글자 숫자사용 불가
+
+
+main 입력 + Ctrl + space ---->?????? 실행 버튼?? => 자동완성 단축키
+Ctrl + F11
+
+compile된 폴더는 bin폴더에...?
+
+
+// 한줄 주석
+/*여러줄 주석*/
+
+Tab - 들여쓰기
+
+------------------------------
+
+변수: 꼭 필요함
+(선언과 대입을 통해 만들어짐)
+
+		// 변수 : 하나의 값(데이터)을 가지는 저장소
+		// 선언 : 데이터타입(int) 변수이름;
+		// 대입 : 변수이름 = 값;
+		
+		int a;	// 선언
+		a = 100;	// 대입
+		// = : 대입(a에 100을 대입한다)
+		// ; : 문장의 마침표 역할
+		// ;이 있으면 하나의 실행문이다.
+
+
+기본 데이터 타입(8개)
+
+<크기 작은거부터 써있음>
+
+- 정수형(5개): 일반적 숫자
+** 기본 int
+
+[byte < char < short < int < long]
+1) byte: -128~127             (8비트는 1바이트)
+2) char(캐릭터): 한글자의 문자를 표현한다
+3) short:  약 -32,000 ~ 32,000
+4) int: 약 -21억~21억
+5) long: -2의 63승 ~ 2의 63승 -1 까지 표현
+
+- 실수형(2개): 소수점
+** 기본 double
+
+[float < double]
+1) float: 소수점 8자리
+2) double: 소수점 16자리
+
+
+- 논리형(1개): 결과가 True/ False로 나오는 것
+ex) boolean
+
+<아스키코드표>
+'A' = 65, 'a' = 97, '0' = 48 
+
+Ctrl+/ = 주석처리
+/* */ 로 마무리 해도 됨
+
+| -> shift 누르면서 역 슬래쉬
+
+이클립스 사이트:
+왼쪽 상단 주황색 다운로드 - 다운로드 패키지
+
+----------------------------------------------------
+
+0425 메모
+
+1. 자바 다운로드 방법
+
+www.oracle.com
+- 리소스 - 자바다운로드 - 자바SE - 자바11 - 윈도우 - 로그인
+socoooool90@gmail.com
+(비번 첫글자 대문자)
+
+윈도우 - x - y
+: 시스템정보 - 고급시스템 설정 - 환경변수
+o에 대한 사용자변수 - 새로만들기(JAVA_HOME) - java jdk11 설치한 폴더 주소 복사 -
+시스템변수 - path - %JAVA_HOME%\bin - 맨 위로 이동 - 확인
+
+
+
+윈도우 - cmd(명령 프롬프트)
+java
+javac
+jave -version
+
+2. 
+신규 메모장 으로 저장 시 Test.java - 모든 파일 형식으로 저장
+
+class Test{
+	public static void main(String[] args){
+		System.out.println("hello world");
+
+}
+
+}
+
+
+- 저장 시 - 모든파일 형식으로 저장
+
+
+.. 점 두개는 파일 바깥으로 나가는 것
+
+cd..
+cd..
+cd jms
+javac Test.java
+java Test
+
+까지 치면 hello world 가 뜸
+
+
+
+----------------------------------------------------------
+0427 메모 - 자바란? 복습
+
+JDK 안에
+JRE(설치, 개발시 필요) + JVM(개발시 필요)
+*JVM 메모리자동관리.
+
+객체지향언어 (OOP) 
+-> 부품 객체를 먼저 만들고, 이것들을 조합해 전체 프로그램을 완성하는 기법
+-> 자바는 처음부터 OOP개발용 언어로 설계
+: 캡슐화, 상속, 다형성 기능 완벽하게 지원
+
+
+
+
+* main(메소드이름) 입력이 없으면 못함
+-> main 이후로는 print문만 출력하면 된다. 의 뜻으로 이해.
+
+* 한번 컴파일 된 이름은 수정하지 않도록.
+차라리 삭제하고 다시 작성...
+
+
+============================
+g
+
+0428 
+
+WhileEx03 다시 보기
+
+
+자바 베이스
+자바 랭
+스트링
+
+=============================
+
+0501
+
+spring framework - 틀에 맞춰서 코딩입력하면 되는.. 그런 개념
+현재는 jsp도 많이 사용한다.
+프로그래밍 언어의 문법은 거의 비슷하다.
+
+분야는 크게 2가지
+front(view)/ back(server)////////////
+
+
+->> front를 알아둬야 추후 back엔드 개발자로 프론트쪽과 소통이 가능하다.
+
+1. front쪽에서는
+react/ vue/ svelte/ angular(구글에서 만들/ 지금은 잘 안쓰는듯)
+(react는 페이스북에서 만든거..)
+
+2. back 쪽에서는
+jave spring
+javascript - node(express, nest)
+ 	toy language라고 불릴 정도로 장난감처럼 가볍게 쓰기도 했지만 ㅏ지금은 많이 쓴다.
+(허용하는게 많다)
+
+python
+
+
+vscode - visual studio code
+intellij?
+
+---------------------
+
+git
+--> 형상관리
+
+
+cmd - git --version
+
+copilot - 다른 사람이 만든 코드를 갖다 쓸 수 있다.
+aws codebuild?
+
+코딩컨벤션 - 코딩규칙을 정해두고 쓰도록 한다(회사에서)
+카멜케이스 => 대문자 중간에 쓰는거(낙타 등처럼 올라왔다해서)
+
+백준의 알고리즘
+==================
+
+git 설치 후 내 폴더에서 git bash 누르기
+
+
+y@DESKTOP-DV28BNK MINGW64 ~/Desktop/moonsan/eclipse/moonsan
+$ git config --global user.email socoooool90@gmail.com
+
+y@DESKTOP-DV28BNK MINGW64 ~/Desktop/moonsan/eclipse/moonsan
+$ git config --global user.name moonsan
+
+
+y@DESKTOP-DV28BNK MINGW64 ~/Desktop/moonsan/eclipse/moonsan
+$ git init (평생관리하겠다)
+Initialized empty Git repository in C:/Users/y/Desktop/moonsan/eclipse/moonsan/.git/
+
+
+
+텍스트파일 을 만들어서 - .gitignore -> 메모장으로 열어서 .metadata
+
+
+Ctrl+shift+F = 정렬
+
+======================
+git clone 주소
+
+git add .
+cd java
+------------ > 내용 다시 가져올때
+git add .
+git commit -m "test class 추 가"
+git push origin master
+
+
+========================
+
+집에서 공부한 것을 가져오고 싶을 때
+
+git pull origin master
+
+
+
+
+
+
+
+
+ 

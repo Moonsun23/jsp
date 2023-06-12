@@ -31,6 +31,7 @@
 	pstmt=conn.prepareStatement(sql);
 	pstmt.setString(1, pLoggedUserId);
 	rs=pstmt.executeQuery();
+	
 	String address=null;
 	String detailAddress=null;
 	String zonecode=null;
@@ -50,7 +51,7 @@
 %>
 <div class="container-sm mt-5">
   <table class="table">
-    <div></div>
+    
     <tbody>
       <tr>
         <th scope="row">ID</th>

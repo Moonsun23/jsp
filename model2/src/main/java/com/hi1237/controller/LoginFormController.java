@@ -1,5 +1,5 @@
 package com.hi1237.controller;
-
+// 여기는 java 코드는 거의 없고 아래 WEB-INF/ 경로 를 통해 페이지를 연결시켜주는 역할이 있음..
 import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;

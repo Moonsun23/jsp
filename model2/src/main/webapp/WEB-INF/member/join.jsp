@@ -72,7 +72,7 @@
  console.log(joinForm);
   
 
-  let isDoubleCheck = true;
+  let isDoubleCheck = false;
 
   btnSubmit.addEventListener("click", (e) => {
     console.log(joinForm.elements.userName.value);
@@ -131,7 +131,7 @@
    
   });
   btnIdCheck.addEventListener("click", () => {
-    fetch("idCheck.jsp?userId=" + userId.value)
+    fetch("../member/idCheck?userId=" + userId.value)
       .then((response) => {
         return response.json();
       })

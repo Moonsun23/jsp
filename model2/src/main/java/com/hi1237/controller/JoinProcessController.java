@@ -22,7 +22,7 @@ public class JoinProcessController extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
-		String userId=request.getParameter("userId");
+		String userId=request.getParameter("userId"); // join.jsp의 name을 가져온 것
 		String userPw=request.getParameter("userPw");
 		String userName=request.getParameter("userName");
 		String userEmail=request.getParameter("userEmail");

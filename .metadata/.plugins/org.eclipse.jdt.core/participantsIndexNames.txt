@@ -9,10 +9,14 @@ C:\Users\y\Desktop\jsp-lecture\.metadata\.plugins\org.eclipse.jst.jsp.core\jspse
 \model2\src\main\java
 C:\Users\y\Desktop\jsp-lecture\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\875471413.index
 \jsp01\src\main\java
+C:\Users\y\Desktop\jsp-lecture\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\22195356.index
+\model22\src\main\java
 C:\Users\y\Desktop\jsp-lecture\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\810764759.index
 \db-connect\src\main\java
 C:\Users\y\Desktop\jsp-lecture\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2082080613.index
 \db-connect\src\main\java
+C:\Users\y\Desktop\jsp-lecture\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1830328352.index
+\model2\src\main\java
 C:\Users\y\Desktop\jsp-lecture\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2735161392.index
 \model2\src\main\java
 C:\Users\y\Desktop\jsp-lecture\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\142165651.index

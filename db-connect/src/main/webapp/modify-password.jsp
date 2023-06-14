@@ -51,8 +51,9 @@
       pwForm.elements.userPw.focus();
     }
   });
+  
 
-  //  btnSubmit.addEventListener("click", (e) => {
+  ////  btnSubmit.addEventListener("click", (e) => {
   //    	//console.log(pwForm.elements.newUserPw.value);
   //   if(pwForm.elements.userPw.value.trim() === ""){
   //   		if (pwForm.elements.newUserPw.value.trim() === "") {
@@ -73,6 +74,6 @@
   // 	        pwForm.elements.newUserPw02.focus();
   // 	    }
   //    	  });
-</script>
 
+</script>
 <%@include file = "include/footer.jsp" %>

@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <!-- 자바코드를 마치 태그처럼 사용하기 위해 jstl을 쓴다. 아래줄 lib는 library// prefix 접두어로 무엇을 쓸건지? 보통 c를 쓴다.. -->
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="jakarta.tags.core" prefix="c" %>
 
 
 <!DOCTYPE html>
@@ -10,8 +10,10 @@
     <meta charset="UTF-8" />
     <title>Insert title here</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
   </head>
   <body>
     <div class="container">
@@ -28,10 +30,13 @@
             	<c:when test="${loggedMember eq null }"> <!-- 다르다 를 쓸때는 ne  -->
             		<li class="nav-item"><a href="../member/login" class="nav-link">login</a></li>
             		<li class="nav-item"><a href="../member/join" class="nav-link">join</a></li>
+            		<li class="nav-item"><a href="../board/list" class="nav-link">글목록</a></li>
             	</c:when>
             	<c:otherwise>
             		<li class="nav-item"><a href="../member/logout" class="nav-link">logout</a></li>
-                    <li class="nav-item"><a href="../member/info?userId=hi1237" class="nav-link">${loggedMember.name }</a></li>
+                    <li class="nav-item"><a href="../member/info?userId=${loggedMember.id }" class="nav-link">${loggedMember.name }</a></li>
+                    <li class="nav-item"><a href="../board/list" class="nav-link">글목록</a></li>
+                    <li class="nav-item"><a href="../board/write" class="nav-link">작성하기</a></li>
             	</c:otherwise>
             </c:choose>
             

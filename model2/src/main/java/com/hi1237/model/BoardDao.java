@@ -64,14 +64,19 @@ public class BoardDao {
 		return result;
 	}
 
-	public ArrayList<BoardDto> getList() {
+	public ArrayList<BoardDto> getList(int start, int end) {
 		ArrayList<BoardDto> boardList = null;
 		
 		getConnection();
-		String sql = "select * from board order by id desc";		// 최신글이 맨 위로 올라오게 만들어줌...
+		String sql = "select * from"
+				+ "(select rownum as no,  b.* from "
+				+ "(select * from board order by id desc) b) where no >= ? and no <= ?";		// 최신글이 맨 위로 올라오게 만들어줌... 정렬기능
+		// id라는 것을 통해서 최신것부터 정렬하겠다..
 		
 		try {
 			pstmt=conn.prepareStatement(sql);
+			pstmt.setInt(1, start);
+			pstmt.setInt(2, end);									// 위에 int start, end를 넣어줘서 옆 코드에 매개변수를 쓸 수 있음...
 			rs= pstmt.executeQuery();
 			boardList= new ArrayList<BoardDto>();  					// <> 안에는 안써도 됨
 			
@@ -96,6 +101,7 @@ public class BoardDao {
 	}
 	
 	public void updateHit(int id) {
+		getConnection();
 		String sql = "update board set hit = hit + 1 where id = ?";
 		try {
 			pstmt=conn.prepareStatement(sql);
@@ -113,8 +119,9 @@ public class BoardDao {
 	}
 
 	public BoardDto getView(int id) {
-		updateHit(id);						// 위의 updateHit(id)를 불러와서 실행이 되고나서 close 되고.. 아래 다시 BoardDto가 실행되면서 게시판 글도 나옴
+								
 		BoardDto boardDto = null;
+		updateHit(id); 					// 위의 updateHit(id)를 불러와서 실행이 되고나서 close 되고.. 아래 다시 연결되면서 게시판 글도 나옴
 			getConnection();
 			String sql= "select * from board where id = ?";
 			
@@ -144,6 +151,71 @@ public class BoardDao {
 			}
 		
 		return boardDto;
+	}
+
+	public int deleteBoard(int id) {
+		int result = 0;
+		getConnection();
+		
+		String sql= "delete from board where id = ?";
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, id);
+			
+			result= pstmt.executeUpdate();
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+		}
+		
+		
+		return result;
+	}
+
+	public int modifyBoard(BoardDto boardDto) {
+		int result=0;
+		getConnection();
+		String sql = "update board set title = ?, name = ?, contents = ? where id = ?";
+		
+		try {
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, boardDto.getTitle());
+			pstmt.setString(2, boardDto.getName());
+			pstmt.setString(3, boardDto.getContents());
+			pstmt.setInt(4, boardDto.getId());
+			result=pstmt.executeUpdate();
+			
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return result;
+	}
+
+	public double getTotal() {									//게시글 수 구함
+		double total=0;
+		getConnection();
+		
+		String sql = "select count(*) as total from board";
+		
+		try {
+			pstmt=conn.prepareStatement(sql);
+			rs=pstmt.executeQuery();
+			if(rs.next()) {
+				total = rs.getInt("total");
+			}
+			
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+		
+		return total;
 	}
 	
 	

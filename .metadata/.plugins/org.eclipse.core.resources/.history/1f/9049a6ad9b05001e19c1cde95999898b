@@ -1,7 +1,0 @@
-<%@ page language="java" contentType="application/json; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    <!-- db조회해서 아이디가 중복인지 아닌지 판단 -->
-{
-	"isOk":true
-
-}

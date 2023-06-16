@@ -33,6 +33,27 @@
 			 
 			  </tbody>
 		</table>
+		
+		
+		<div class="mt-5 text-center">
+			<a href="../board/write" class="btn btn-primary">Write </a>
+			<c:if test="${loggedMember.id eq boardDto.userID}">
+				<a href="../board/modify?id=${boardDto.id }" class="btn btn-primary">Soojung </a>
+				<a href="../board/delete?id=${boardDto.id }" id="btnDelete" class="btn btn-danger">Delete </a> 
+			</c:if>
+			<a href="../board/list?clickPage=${param.clickPage }" class="btn btn-primary">List </a>
+		</div>
+		<script>
+			const btnDelete = document.querySelector("#btnDelete");
+			btnDelete.addEventListener("click", (e)=>{
+				e.preventDefault();
+				const isDelete= confirm("정말 삭제하시겠습니까?");
+				if(isDelete){
+					location.href="../board/delete?id="+ ${boardDto.id };
+				}
+				
+			});
+		</script>
 	</div> 
 
 <%@ include file = "../include/footer.jsp" %>

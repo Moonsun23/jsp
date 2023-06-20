@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> 
 <%@ include file = "../include/header.jsp" %>
 
-<form action="../member/joinProcess" method="post" class="join" name="joinForm">
+<form action="../member/joinProcess" method="post" class="join" name="joinForm" enctype="multipart/form-data">
+																								<!-- enctype: 인코딩타입 // method는 무조건 post 타입으로.-->
  
   <div class="container-sm">
     <div class="row justify-content-center mt-5">
@@ -33,6 +34,13 @@
           <input type="text" name="userEmail" class="form-control" id="floatingMail" placeholder="이메일을 입력해주세요." />
           
         </div>
+        
+        <div class="mb-3">													<!-- 파일업로드 태그(부트스트랩) -->
+		  <label for="formFile" class="form-label">Profile</label>
+		  <input class="form-control" type="file" id="profile" name="profile">			<!-- input타입이 file인 것이 핵심 -->
+		</div>
+        
+        
         <div class="input-group mb-3">
             <input type="text" class="form-control" id="zonecode" placeholder="우편번호" name="zonecode" readonly />
             <button class="btn btn-secondary" type="button" id="button-addon2" onclick="searchZonecode()">입력</button>

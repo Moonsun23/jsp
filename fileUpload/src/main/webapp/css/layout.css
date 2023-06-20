@@ -1,0 +1,23 @@
+.join {
+  width: 1200px;
+  margin: 100px auto;
+}
+
+.contents {
+  white-space: pre-wrap;
+}
+
+.note-icon-caret {
+  display: none !important;
+}
+
+.profile {
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border: 1px solid #999;
+}
